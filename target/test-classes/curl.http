@@ -1,0 +1,47 @@
+# curl http://localhost:8080/books
+GET http://localhost:8080/books
+
+###
+
+# curl -X POST -i -H "Content-Type: application/json"
+#
+#-d '{"isbn":"34321","title":"Thinking in Java", "publisher":"Helion","type":"programming", "author":"Bruce Eckel"}'
+#
+#http://localhost:8080/books
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "isbn": "442663634",
+  "title": "Spring",
+  "author": "Michael Wu",
+  "publisher": "Pro Community",
+  "type": "Software Development"
+}
+
+###
+GET http://localhost:8080/books/4
+
+###
+
+DELETE http://localhost:8080/books/2
+
+###
+# curl -X PUT -i -H "Content-Type: application/json"
+#-d   '{"id":1,"isbn":"32222","title":"Thinking in C#",  "publisher":"IT Books","type":"programming", "author":"Bruce Eckel"}
+#' http://localhost:8080/books
+PUT http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "id": 7,
+  "isbn": "32222",
+  "title": "Thinking in C#",
+  "publisher": "IT Books",
+  "type": "programming",
+  "author": "Bruce Eckel"
+}
+
+
+###
+
